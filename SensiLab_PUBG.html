@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SensiLab PUBG PC — DPI & Sensibilidade</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#070a0e;color:#f4f5f7;font-family:Inter,Arial,sans-serif}
+:root{--y:#ffc400;--y2:#ff9f00;--bg:#070a0e;--p:#11161d;--p2:#181f27;--line:#2a333e;--muted:#a4aeba;--green:#61e294}
+.wrap{width:min(1120px,92%);margin:auto}
+nav{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;background:#070a0eee;backdrop-filter:blur(12px);position:sticky;top:0;z-index:20}
+nav .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:900;letter-spacing:.5px}.logo b{color:var(--y)}
+.links{display:flex;gap:24px;color:var(--muted);font-size:14px}.links a:hover{color:#fff}
+.hero{padding:85px 0 70px;text-align:center;background:radial-gradient(circle at 50% 0,#3b2d00 0,transparent 38%)}
+.tag{display:inline-block;color:#ffd83e;border:1px solid #665400;background:#1b1705;border-radius:30px;padding:8px 13px;font-size:11px;font-weight:900;letter-spacing:1px}
+h1{font-size:clamp(42px,7vw,74px);line-height:.98;margin:22px 0 15px}.yellow{color:var(--y)}
+.hero p{max-width:720px;margin:auto;color:var(--muted);line-height:1.7;font-size:18px}
+.btn{border:0;border-radius:10px;padding:14px 19px;font-weight:900;cursor:pointer;display:inline-block}
+.primary{background:var(--y);color:#111}.primary:hover{background:#ffd53c}
+.secondary{background:var(--p);color:#fff;border:1px solid var(--line);margin-left:8px}
+section{padding:68px 0}.title{text-align:center;max-width:760px;margin:0 auto 35px}.title h2{font-size:36px;margin:0 0 10px}.title p{color:var(--muted);line-height:1.65}
+.box{background:var(--p);border:1px solid var(--line);border-radius:20px;padding:24px}
+.builder{display:grid;grid-template-columns:350px 1fr;gap:20px}
+label{display:block;margin:16px 0 7px;font-size:13px;font-weight:800}
+select,input{width:100%;padding:12px;background:#090d12;color:#fff;border:1px solid #303a45;border-radius:9px}
+.range{display:grid;grid-template-columns:1fr 100px;gap:10px;align-items:center}.range input{padding:9px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}.tab{padding:10px 13px;background:#0b1016;border:1px solid var(--line);color:#b9c2cb;border-radius:8px;cursor:pointer}.tab.active{background:var(--y);color:#111;font-weight:900}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.item{background:var(--p2);border:1px solid var(--line);padding:15px;border-radius:13px}.item small{display:block;color:var(--muted)}.item strong{display:block;font-size:24px;color:var(--y);margin-top:7px}
+.note{font-size:12px;color:#7f8a96;line-height:1.5;margin-top:15px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.metric{background:var(--p2);border:1px solid var(--line);border-radius:14px;padding:16px}.metric span{color:var(--muted);font-size:12px}.metric strong{display:block;font-size:25px;margin-top:6px;color:var(--y)}
+.dpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.dpi{background:var(--p);border:1px solid var(--line);border-radius:16px;padding:20px}.dpi h3{margin:0 0 6px}.dpi p{color:var(--muted);font-size:13px;line-height:1.5}.dpi .num{font-size:30px;font-weight:900;color:var(--y)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{background:var(--p);border:1px solid var(--line);border-radius:16px;padding:22px}.feature h3{margin:10px 0}.feature p{color:var(--muted);line-height:1.6;font-size:14px}
+footer{border-top:1px solid var(--line);padding:30px;text-align:center;color:#7f8a96;font-size:12px}
+@media(max-width:850px){.builder{grid-template-columns:1fr}.dpi-grid,.features{grid-template-columns:repeat(2,1fr)}.metrics{grid-template-columns:repeat(2,1fr)}.links{display:none}}
+@media(max-width:500px){.grid,.dpi-grid,.features{grid-template-columns:1fr}.metrics{grid-template-columns:1fr}.secondary{margin-left:0;margin-top:8px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><div class="logo">◈ SENSI<b>LAB</b> <span style="font-size:11px;color:#8f9aa5">PUBG PC</span></div>
+<div class="links"><a href="#gerador">Gerador</a><a href="#dpi">DPI</a><a href="#edpi">eDPI</a><a href="#dicas">Dicas</a></div></div></nav>
+
+<section class="hero"><div class="wrap">
+<span class="tag">PUBG PC • DPI • SENSIBILIDADE • AIM</span>
+<h1>Monte sua <span class="yellow">sensi</span><br>do seu jeito.</h1>
+<p>Uma ferramenta para organizar DPI, sensibilidade do PUBG, ADS e eDPI. Compare configurações e use os números como ponto de partida para encontrar seu controle.</p>
+<a class="btn primary" href="#gerador">🎯 MONTAR MINHA SENSI</a>
+<a class="btn secondary" href="#dpi">🖱️ EXPLORAR DPI</a>
+</div></section>
+
+<section id="gerador"><div class="wrap">
+<div class="title"><h2>Gerador de Sensi — PUBG PC</h2><p>Escolha DPI, estilo e objetivo. O gerador cria uma configuração inicial; não existe uma sensibilidade universal.</p></div>
+<div class="builder">
+<div class="box">
+<h3 style="margin-top:0">Seu setup</h3>
+<label>DPI do mouse</label>
+<select id="dpiSelect">
+<option value="400">400 DPI</option><option value="600">600 DPI</option><option value="800" selected>800 DPI</option><option value="1000">1000 DPI</option><option value="1200">1200 DPI</option><option value="1600">1600 DPI</option><option value="2400">2400 DPI</option><option value="3200">3200 DPI</option>
+</select>
+<label>Estilo de jogo</label>
+<select id="style"><option value="balanced">Equilibrado</option><option value="low">Low sens / controle</option><option value="high">High sens / movimentos rápidos</option><option value="spray">Foco em spray</option><option value="close">Foco em combate próximo</option></select>
+<label>Objetivo</label>
+<select id="goal"><option value="mixed">Tudo</option><option value="aim">Mira / microajustes</option><option value="spray">Controle de recoil</option><option value="tracking">Tracking</option></select>
+<label>Multiplicador personalizado</label>
+<div class="range"><input id="mult" type="range" min="70" max="130" value="100" oninput="multVal.textContent=this.value+'%'"><strong id="multVal">100%</strong></div>
+<button class="btn primary" style="width:100%;margin-top:20px" onclick="generate()">⚡ GERAR CONFIGURAÇÃO</button>
+</div>
+<div class="box">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h3 style="margin:0">Configuração sugerida</h3><span style="color:var(--green);font-size:11px;font-weight:900">PONTO DE PARTIDA</span></div>
+<div class="metrics">
+<div class="metric"><span>DPI</span><strong id="mDpi">800</strong></div>
+<div class="metric"><span>eDPI</span><strong id="mEdpi">280</strong></div>
+<div class="metric"><span>Base</span><strong id="mBase">35</strong></div>
+<div class="metric"><span>Multiplicador</span><strong id="mMult">100%</strong></div>
+</div>
+<div class="tabs" style="margin-top:22px">
+<button class="tab active" onclick="showTab('camera',this)">Câmera</button>
+<button class="tab" onclick="showTab('ads',this)">ADS</button>
+<button class="tab" onclick="showTab('scope',this)">Scopes</button>
+</div>
+<div id="result" class="grid"></div>
+<div style="display:flex;gap:10px;margin-top:18px"><button class="btn secondary" onclick="copyConfig()">📋 COPIAR</button><button class="btn primary" onclick="generate()">🔄 GERAR NOVA</button></div>
+<div id="msg"></div>
+</div></div>
+<p class="note">Importante: DPI e sensibilidade são preferências individuais. O eDPI aqui é uma métrica simples de comparação (DPI × sensibilidade usada como referência), não uma medida oficial do PUBG.</p>
+</div></section>
+
+<section id="dpi"><div class="wrap">
+<div class="title"><h2>Qual DPI usar?</h2><p>O SensiLab permite comparar diferentes faixas. Em vez de procurar “o DPI perfeito”, teste uma configuração por tempo suficiente para criar memória muscular.</p></div>
+<div class="dpi-grid">
+<div class="dpi"><div class="num">400</div><h3>Low DPI</h3><p>Mais movimento físico do mouse para percorrer a mesma distância na tela.</p></div>
+<div class="dpi"><div class="num">800</div><h3>800 DPI</h3><p>Uma referência muito usada por jogadores de FPS; combine com uma sensibilidade confortável.</p></div>
+<div class="dpi"><div class="num">1600</div><h3>1600 DPI</h3><p>Permite trabalhar com valores menores de sensibilidade dentro do jogo.</p></div>
+<div class="dpi"><div class="num">3200</div><h3>3200 DPI</h3><p>Faixa alta de DPI. Pode ser testada, mas não significa automaticamente mais precisão.</p></div>
+</div>
+</div></section>
+
+<section id="edpi"><div class="wrap">
+<div class="title"><h2>Calculadora de eDPI</h2><p>Use para comparar duas configurações sem depender apenas do número de DPI.</p></div>
+<div class="box" style="max-width:700px;margin:auto">
+<div class="metrics" style="grid-template-columns:1fr 1fr">
+<div><label>DPI</label><input id="calcDpi" type="number" value="800"></div>
+<div><label>Sensibilidade</label><input id="calcSens" type="number" value="35" step="0.1"></div>
+</div>
+<button class="btn primary" onclick="calcEdpi()">CALCULAR eDPI</button>
+<div id="edpiResult" style="margin-top:20px;font-size:22px;font-weight:900;color:var(--y)"></div>
+<p class="note">Fórmula simples: eDPI = DPI × sensibilidade informada.</p>
+</div>
+</div></section>
+
+<section id="dicas"><div class="wrap">
+<div class="title"><h2>Guia rápido</h2><p>O site pode crescer para guardar perfis e acompanhar sua evolução.</p></div>
+<div class="features">
+<div class="feature"><h3>🎯 Ajuste pequeno</h3><p>Mude poucos pontos por vez. Grandes mudanças dificultam perceber o que realmente melhorou.</p></div>
+<div class="feature"><h3>🖱️ Consistência</h3><p>Use o mesmo DPI durante os testes. Trocar DPI e sensibilidade ao mesmo tempo torna a comparação mais difícil.</p></div>
+<div class="feature"><h3>📈 Histórico</h3><p>Salve suas configurações, partidas e resultados para descobrir qual setup funciona melhor para você.</p></div>
+</div>
+</div></section>
+
+<footer>SensiLab PUBG PC • Projeto independente. Não afiliado à PUBG Corporation, KRAFTON ou Tencent.</footer>
+
+<script>
+const bases={
+camera:{'Geral':35,'Red Dot / Holo':35,'2x':30,'3x':25,'4x':20,'6x':15,'8x':10},
+ads:{'Geral':35,'Red Dot / Holo':30,'2x':27,'3x':23,'4x':18,'6x':13,'8x':9},
+scope:{'Red Dot / Holo':35,'2x':30,'3x':25,'4x':20,'6x':15,'8x':10}};
+let data={camera:{},ads:{},scope:{}},active='camera';
+
+function generate(){
+ const dpi=+dpiSelect.value, styleV=style.value, goalV=goal.value, mult=+mult.value/100;
+ let factor=styleV==='low'?.82:styleV==='high'?1.15:styleV==='spray'?.92:styleV==='close'?1.08:1;
+ if(goalV==='aim')factor*=.94;if(goalV==='spray')factor*=.9;if(goalV==='tracking')factor*=1.04;
+ factor*=mult;
+ for(const tab in bases){data[tab]={};for(const [k,v] of Object.entries(bases[tab]))data[tab][k]=Math.max(1,Math.round(v*factor*10)/10)}
+ mDpi.textContent=dpi;mMult.textContent=Math.round(mult*100)+'%';
+ mBase.textContent=data.camera['Geral'];mEdpi.textContent=Math.round(dpi*data.camera['Geral']);
+ render();
+}
+function render(){result.innerHTML='';for(const [k,v] of Object.entries(data[active]))result.innerHTML+=`<div class="item"><small>${k}</small><strong>${v}%</strong></div>`}
+function showTab(t,b){active=t;document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()}
+function copyConfig(){
+ let s='SensiLab PUBG PC\\nDPI: '+dpiSelect.value+'\\n';
+ for(const t in data){s+='\\n'+t.toUpperCase()+'\\n';for(const [k,v] of Object.entries(data[t]))s+=k+': '+v+'%\\n'}
+ navigator.clipboard?.writeText(s);msg.innerHTML='<p style="color:var(--green)">✓ Configuração copiada!</p>';setTimeout(()=>msg.innerHTML='',2200)
+}
+function calcEdpi(){edpiResult.textContent='eDPI: '+Math.round((+calcDpi.value)*(+calcSens.value)*10)/10}
+generate();calcEdpi();
+</script>
+</body>
+</html>
